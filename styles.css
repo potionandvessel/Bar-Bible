@@ -1,0 +1,84 @@
+body {
+    background-color: #2A2A2A; /* Gunmetal Black */
+    color: #C0A465; /* Antique Gold */
+    font-family: Garamond, serif;
+}
+
+h1, h2, h3 {
+    color: #6A05A5; /* Rich Royal Purple */
+}
+
+a {
+    color: #00B06B; /* Ethereal Green */
+}
+
+a:hover {
+    color: #C0A465; /* Antique Gold on hover */
+}
+h1 {
+    font-family: 'Times New Roman', Times, serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-bottom: 2px solid #6A05A5; /* Rich Royal Purple */
+    padding-bottom: 5px;
+}
+
+h2, h3 {
+    font-family: 'Times New Roman', Times, serif;
+    text-transform: uppercase;
+}
+
+ul {
+    list-style-type: none; /* Removes the bullet points */
+    padding: 0;
+}
+
+a {
+    text-decoration: none; /* Removes the underline from links */
+}
+
+a:hover {
+    text-decoration: underline; /* Adds the underline back on hover for a nice effect */
+}
+.recipe-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    max-width: 900px;
+    margin: 20px auto;
+    background-color: #2A2A2A; /* Match the body background */
+    border: 1px solid #6A05A5; /* A border for your content block */
+    padding: 20px;
+}
+
+.column {
+    flex: 1;
+    min-width: 300px;
+    padding: 0 10px;
+}
+
+.column ul {
+    list-style-type: disc; /* Re-adds bullet points for ingredients list */
+    padding-left: 20px;
+}
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    border-top: 1px solid #6A05A5; /* A subtle line to separate the footer */
+    font-size: 0.9em; /* Makes the text a little smaller */
+    color: #C0A465; /* Antique Gold */
+}
+#searchBar {
+    width: 100%;
+    max-width: 500px;
+    padding: 10px;
+    margin: 20px auto;
+    display: block;
+    border: 1px solid #6A05A5;
+    background-color: #2A2A2A;
+    color: #C0A465;
+    font-family: Garamond, serif;
+    font-size: 1.2em;
+}

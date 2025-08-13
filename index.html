@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Digital Cocktail Book</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <h1>Bar Bible</h1>
+    <p>Click on a cocktail below to see the recipe:</p>
+
+    <input type="text" id="searchBar" placeholder="Search for a cocktail...">
+    <ul>
+        <li><a href="matcha-fragola.html">Matcha Fragola</a></li>
+        <li><a href="breakfast-pill.html">Breakfast Pill IV</a></li>
+        <li><a href="emperors-new-clothes.html">Emperor’s New Clothes</a></li>
+        </ul>
+ <img src="potion-vessel-logo-dark.png" alt="Potion & Vessel Logo" style="display: block; margin-left: auto; margin-right: auto; width: 200px;">
+    <footer>
+    <p>© 2025 Potion & Vessel</p>
+</footer>
+    <script>
+    const searchBar = document.getElementById('searchBar');
+    const cocktailList = document.querySelectorAll('li');
+
+    searchBar.addEventListener('keyup', (event) => {
+        const searchTerm = event.target.value.toLowerCase();
+        
+        cocktailList.forEach(cocktail => {
+            const cocktailName = cocktail.textContent.toLowerCase();
+            if (cocktailName.includes(searchTerm)) {
+                cocktail.style.display = 'block';
+            } else {
+                cocktail.style.display = 'none';
+            }
+        });
+    });
+</script>
+</body>
+</html>
