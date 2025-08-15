@@ -1,84 +1,148 @@
+@font-face {
+    font-family: 'Bodoni Moda';
+    src: url('BodoniModa-VariableFont_opsz,wght.ttf') format('truetype');
+}
+
+/* Core Styling & Brand Colors */
 body {
-    background-color: #2A2A2A; /* Gunmetal Black */
-    color: #C0A465; /* Antique Gold */
     font-family: Garamond, serif;
+    background-color: #1F1F1F; /* Gunmetal Black base */
+    color: #EFEFEF; /* Soft White for all main text */
+    margin: 0;
+    padding: 20px;
+    line-height: 1.6;
 }
 
-h1, h2, h3 {
-    color: #6A05A5; /* Rich Royal Purple */
-}
-
+/* Change link color for better readability */
 a {
-    color: #00B06B; /* Ethereal Green */
+    color: #DFFF00; /* Chartreuse splash for links */
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
 }
 
 a:hover {
-    color: #C0A465; /* Antique Gold on hover */
+    color: #EFEFEF; /* Hover color */
 }
+
+/* Banner Styling */
+.main-banner {
+    text-align: center;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+/* The custom banner on the main page */
+.main-banner #custom-banner {
+    max-width: 100%;
+    height: auto;
+    max-height: 200px;
+    overflow: hidden;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Images and videos on all other pages */
+.banner-image, .banner-video {
+    max-width: 600px; /* NEW: Sets a maximum width for all recipe images */
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
 h1 {
-    font-family: 'Times New Roman', Times, serif;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    border-bottom: 2px solid #6A05A5; /* Rich Royal Purple */
+    font-family: 'Bodoni Moda', serif;
+    color: #EFEFEF;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-family: 'Bodoni Moda', serif;
+    color: #EFEFEF;
+    border-bottom: 1px solid #4B0082; /* Rich Royal Purple highlight */
     padding-bottom: 5px;
+    margin-bottom: 15px;
+    text-align: center;
 }
 
-h2, h3 {
-    font-family: 'Times New Roman', Times, serif;
+h3 {
+    font-family: 'Bodoni Moda', serif;
+    color: #DFFF00; /* Chartreuse splash */
+    font-size: 1.1em;
     text-transform: uppercase;
+    margin-top: 25px; /* Add some space above the tip heading */
+    text-align: center;
 }
 
-ul {
-    list-style-type: none; /* Removes the bullet points */
-    padding: 0;
-}
-
-a {
-    text-decoration: none; /* Removes the underline from links */
-}
-
-a:hover {
-    text-decoration: underline; /* Adds the underline back on hover for a nice effect */
-}
+/* Specific Element Styling */
 .recipe-content {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
     flex-wrap: wrap;
-    max-width: 900px;
-    margin: 20px auto;
-    background-color: #2A2A2A; /* Match the body background */
-    border: 1px solid #6A05A5; /* A border for your content block */
-    padding: 20px;
+    justify-content: space-between;
+    gap: 20px;
 }
 
 .column {
     flex: 1;
-    min-width: 300px;
-    padding: 0 10px;
+    min-width: 250px;
 }
 
-.column ul {
-    list-style-type: disc; /* Re-adds bullet points for ingredients list */
-    padding-left: 20px;
+/* Link & Footer Styling */
+/* Stone Tablet & Engraving Styling */
+.tablet-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #36454F; /* Dark Slate Grey for a stone color */
+    background-image: url('stone-texture.jpg');
+    background-size: cover;
+    padding: 30px;
+    border-radius: 15px;
+    border: 5px solid #D4AF37; /* Gold trim */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); /* Adds a 3D effect */
+    max-width: 400px;
+    margin: 40px auto;
 }
-footer {
-    text-align: center;
-    padding: 20px;
-    margin-top: 40px;
-    border-top: 1px solid #6A05A5; /* A subtle line to separate the footer */
-    font-size: 0.9em; /* Makes the text a little smaller */
-    color: #C0A465; /* Antique Gold */
-}
-#searchBar {
+
+.tablet-item {
+    margin: 10px 0;
     width: 100%;
-    max-width: 500px;
-    padding: 10px;
-    margin: 20px auto;
-    display: block;
-    border: 1px solid #6A05A5;
-    background-color: #2A2A2A;
-    color: #C0A465;
-    font-family: Garamond, serif;
-    font-size: 1.2em;
+    text-align: center;
+}
+
+.tablet-item a {
+    color: #EFEFEF; /* White text for the "engraving" */
+    font-size: 1.5em;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: inline-block; /* Allows for text shadow effects */
+    text-shadow:
+        -1px -1px 0 #1F1F1F,  /* Dark shadow to create an "engraved" look */
+        1px 1px 0 #D4AF37;   /* Gold highlight to make it pop */
+    transition: text-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.tablet-item a:hover {
+    color: #EFEFEF;
+    text-shadow:
+        0 0 10px #DFFF00,   /* A bright, ethereal green glow */
+        0 0 20px #DFFF00,
+        0 0 30px #4B0082,   /* A deep purple halo for a magical feel */
+        0 0 40px #4B0082;
+    transform: scale(1.05); /* A slight animation to make it feel alive */
+}
+
+footer {
+    border-top: 1px solid #D4AF37; /* Gold trim on the top of the footer */
+    text-align: center;
+    padding: 15px;
+    margin-top: 40px;
+    font-style: italic;
+    font-size: 0.9em;
+    color: #6A05A5; /* A subtle purple for the copyright text */
+}
+
+/* Custom Splash of Color for Tips */
+.recipe-content p:last-of-type {
+    color: #DFFF00;
 }
